@@ -4,15 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "ng": "ng",
-    "postinstall": "ng build --prod",
-    "heroku-postbuild": "ng build --prod",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon server.js",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "SET NODE_ENV=production & node server.js"
   },
   "repository": {
     "type": "git",
