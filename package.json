@@ -4,9 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "ng": "ng",
+    "postinstall": "ng build --prod",
+    "heroku-postbuild": "ng build --prod",
     "start:dev": "nodemon server.js",
-    "start": "SET NODE_ENV=production & node server.js"
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "repository": {
     "type": "git",
@@ -42,8 +48,6 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "postinstall": "ng build --prod",
-    "heroku-postbuild": "ng build --prod",
     "eslint": "^8.5.0",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.3.0",
